@@ -18,7 +18,7 @@ jobs:
           node-version: 16
 
       - name: Install linters
-        run: |
+        run: 
           npm install -g htmlhint stylelint stylelint-config-standard
 
       - name: Lint HTML files
