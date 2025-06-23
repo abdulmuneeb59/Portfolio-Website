@@ -18,8 +18,11 @@ jobs:
           node-version: 16
 
       - name: Install linters
-        run: |
+        run: 
           npm install -g htmlhint stylelint stylelint-config-standard
+
+      - name: Lint HTML files
+        run: htmlhint "src/**/*.html" .htmlhintrc.json
 
       # Temporarily disable CSS lint
       # - name: Lint CSS files
